@@ -15,7 +15,7 @@
 
 // }
 // Console.WriteLine();
-// Console.WriteLine(count);
+// Console.WriteLine(count++);
 
 // -----------------------------------------------------------------
 
@@ -46,21 +46,22 @@ for (int i = 0; i < array.Length; i++)
     string result = string.Format("{0:0.00}", array[i]);
     Console.Write(result + " | ");
 }
-double maxElement = array.Max();
-double minElement = array.Min();
+
+double maxElement = array[0];
+double minElement = array[0];
 for (int i = 0; i < array.Length; i++)
 {
     if (array[i] > maxElement)
     {
         maxElement = array[i];
     }
-    if (array[i] > minElement)
+    if (array[i] < minElement)
     {
         minElement = array[i];
     }
 }
 double razn = maxElement - minElement;
-string result_2 = string.Format("{0:0.00}", razn);
+string result_2 = string.Format("{0:0.00}" , razn );
 Console.WriteLine();
 Console.WriteLine("Разность " + result_2);
 
